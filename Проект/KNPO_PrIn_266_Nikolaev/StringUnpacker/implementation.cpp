@@ -25,6 +25,41 @@
     }
 
 
+
+/*! 
+    \brief Проверить содержимое строки на корректность
+    \param[in] inputData входная строка
+
+    \return код ошибки
+*/
+TermError LateEvaluation(const std::string_view inputData)
+{
+    const auto isUpperCaseLetter = [](const char symbol) { return std::isalpha(symbol) && std::isupper(symbol); };
+    const bool AllowedSymb = std::all_of(
+        inputData.begin(),
+        inputData.end(),
+        [=](const char symbol) { return isUpperCaseLetter(symbol) || std::isdigit(symbol); }
+    );
+
+    /// Вернуть код ошибки типа "некорректный символ", если найден символ, который не является заглавной латинской буквой или цифрой
+    if (!AllowedSymb)
+        return TermError::WrongSymbol;
+
+    /// Вернуть код ошибки типа "последняя цифра", если последний символ является цифрой
+    if (const bool numberAtEnd = std::isdigit(inputData.back()); numberAtEnd)
+        return TermError::EndNumber;
+
+    /// Вернуть код без ошибки
+    return TermError::Success;
+}
+
+/*! 
+    \brief Разбить распакованную строку на массив строк по заданной длине 
+    \param[in] inputData распакованная строка
+    \param[in] border ограничитель длины строки
+
+    \return массив строк по заданной длине 
+*/
 std::vector<std::string> DivideString(const std::string_view inputData, const int border)
 {
     /// Вернуть пустой массив, если лимит меньше либо равен 0
