@@ -24,7 +24,43 @@
         return "";
     }
 
+/*! 
+    \brief Распаковать строку
+	\param[in] inputData входная строка
+	
+	\return распакованная строка
+*/
+std::string StringProcessing(const std::string_view inputData)
+{
+    /// Выдать ошибку, если размер строки не соответствует разрешенному диапазону
+    if (inputData.empty() || inputData.size() > 80)
+        throw ExceptionError{TermError::WrongRageOfString};
 
+    /// Выдать ошибку, если содержимое строки не корректно
+    if (const auto numbErr = LateEvaluation(inputData);
+        numbErr != TermError::Success)
+        throw ExceptionError{numbErr};
+
+    /// Разделить строку на модули...
+    const std::vector<Unit> arrayOfCharacters = DivideStringToChars(inputData);
+
+    /// Перевести модули в распакованную строку...
+    int quantityCom = 0;
+    for (const auto [quantityCurrent, _] : arrayOfCharacters)
+        quantityCom += quantityCurrent;
+
+    // Создать строку, в которую будут распакованы модули
+    std::string unpackedString;
+    unpackedString.reserve(quantityCom);
+
+    /// Для каждого модуля
+    for (const auto [quantityCurrent, Char] : arrayOfCharacters)
+        // Добавить к строке символ, содержащийся в модуле в количестве, которое указано в модуле
+        unpackedString += std::string(quantityCurrent, Char);
+
+    /// Вернуть распакованную строку
+    return unpackedString;
+}
 
 /*! 
     \brief Сформировать модуль и записать его в массив
