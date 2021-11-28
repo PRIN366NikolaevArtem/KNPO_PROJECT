@@ -1,0 +1,8 @@
+﻿  TestDivideString.cpp
+C:\Users\rauzo\Desktop\прога\TestDivideString\TestDivideString.cpp(27,22): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\rauzo\Desktop\прога\TestDivideString\TestDivideString.cpp(47,22): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\rauzo\Desktop\прога\TestDivideString\TestDivideString.cpp(69,22): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\rauzo\Desktop\прога\TestDivideString\TestDivideString.cpp(91,22): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\rauzo\Desktop\прога\TestDivideString\TestDivideString.cpp(110,22): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\rauzo\Desktop\прога\TestDivideString\TestDivideString.cpp(129,22): warning C4018: <: несоответствие типов со знаком и без знака
+  TestDivideString.vcxproj -> C:\Users\rauzo\Desktop\прога\Debug\TestDivideString.dll
