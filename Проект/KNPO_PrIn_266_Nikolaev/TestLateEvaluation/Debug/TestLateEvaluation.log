@@ -1,0 +1,10 @@
+﻿  TestLateEvaluation.cpp
+C:\Users\rauzo\Desktop\прога\TestLateEvaluation\TestLateEvaluation.cpp(25,45): warning C4551: в вызове функции отсутствует список аргументов
+C:\Users\rauzo\Desktop\прога\TestLateEvaluation\TestLateEvaluation.cpp(26,17): warning C4551: в вызове функции отсутствует список аргументов
+C:\Users\rauzo\Desktop\прога\TestLateEvaluation\TestLateEvaluation.cpp(41,45): warning C4551: в вызове функции отсутствует список аргументов
+C:\Users\rauzo\Desktop\прога\TestLateEvaluation\TestLateEvaluation.cpp(42,17): warning C4551: в вызове функции отсутствует список аргументов
+C:\Users\rauzo\Desktop\прога\TestLateEvaluation\TestLateEvaluation.cpp(57,45): warning C4551: в вызове функции отсутствует список аргументов
+C:\Users\rauzo\Desktop\прога\TestLateEvaluation\TestLateEvaluation.cpp(58,17): warning C4551: в вызове функции отсутствует список аргументов
+C:\Users\rauzo\Desktop\прога\TestLateEvaluation\TestLateEvaluation.cpp(73,45): warning C4551: в вызове функции отсутствует список аргументов
+C:\Users\rauzo\Desktop\прога\TestLateEvaluation\TestLateEvaluation.cpp(74,17): warning C4551: в вызове функции отсутствует список аргументов
+  TestLateEvaluation.vcxproj -> C:\Users\rauzo\Desktop\прога\Debug\TestLateEvaluation.dll
