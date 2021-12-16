@@ -1,0 +1,77 @@
+.TH "Проект/KNPO_PrIn_266_Nikolaev/StringUnpacker/main.cpp" 3 "Mon Dec 27 2021" "StringUnpacker" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Проект/KNPO_PrIn_266_Nikolaev/StringUnpacker/main.cpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'header\&.hpp'\fP
+.br
+\fC#include <filesystem>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBPreExecuteCheck\fP (int argc, char **argv, std::string &str)"
+.br
+.RI "Проверка файла на корректность "
+.ti -1c
+.RI "int \fBmain\fP (const int argc, char **argv)"
+.br
+.RI "Обеспечить считывание из файла, вывод в консоль ошибок, если они есть, запись ответа в выходной файл, вызов главной функции, решающей задачу "
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "int main (const int argc, char ** argv)"
+
+.PP
+Обеспечить считывание из файла, вывод в консоль ошибок, если они есть, запись ответа в выходной файл, вызов главной функции, решающей задачу 
+.PP
+\fBReturns\fP
+.RS 4
+код завершения программы 
+.RE
+.PP
+Если обнаружена ошибка
+.PP
+Завершить работу программы
+.PP
+Распаковать строку
+.PP
+Разбить распакованную строку на массив строк по длине 40 символов
+.PP
+Записать массив строк в выходной файл
+.SS "int PreExecuteCheck (int argc, char ** argv, std::string & str)"
+
+.PP
+Проверка файла на корректность 
+.PP
+\fBParameters\fP
+.RS 4
+\fIargc\fP количество аргументов командной строки 
+.br
+\fIargv\fP аргументы командной строки 
+.br
+\fI[in|out]\fP str упакованная строка
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+код ошибки 
+.RE
+.PP
+Если входной файл не указан в аргументах командной строки
+.PP
+Вывести сообщение об ошибке и завершить работу программы
+.PP
+Если входной файл невозможно открыть
+.PP
+Вывести сообщение об ошибке и завершить работу программы
+.PP
+Считать строку из файла
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for StringUnpacker from the source code\&.
